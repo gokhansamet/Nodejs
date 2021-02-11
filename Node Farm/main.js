@@ -1,7 +1,7 @@
 const fs = require("fs");
 const http = require("http");
 const url = require("url");
-
+const slugify = require("slugify");
 // We use synchronous way because the code below just executed once.
 // The codes below read the data from html once
 const tempOverview = fs.readFileSync(
@@ -19,6 +19,7 @@ const tempCard = fs.readFileSync(
 
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
 const dataObj = JSON.parse(data);
+dataObj.map((el) => (el["slug"] = slugify(el.productName, { lower: true })));
 
 const replaceTemplate = require("./modules/replaceTemplate");
 
@@ -33,11 +34,15 @@ const server = http.createServer((req, res) => {
       .join("");
     const output = tempOverview.replace("{%PRODUCT_CARDS%}", cardsHtml);
     res.end(output);
-  } else if (pathname === "/product") {
+  } else if (pathname.includes("/product")) {
     res.writeHead(200, {
       "Content-type": "text/html",
     });
-    const product = dataObj[query.id];
+    // To become more readable use the slugify ---> Ex :  /product/apollo-broccoli
+    const slug = pathname.replace("/product/", "");
+    const product = dataObj.filter((el) => {
+      return el.slug === slug;
+    })[0];
     const output = replaceTemplate(tempProduct, product);
     res.end(output);
   } else if (pathname === "/api") {
