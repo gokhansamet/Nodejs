@@ -13,7 +13,9 @@ The picture above shows the overfiew of the application.  We have various produc
 
 The product detail page shows the detail that related product as you can understand from the name. You can see the product where is from coming, what are the vitamins that it's has and the description. Also the add cart button exists to add the product to the shopping card (seeing the prices)
 
-
+#### Note 
+I got information about streams and codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
 _________________________________________________________________________________________________________________________________________________
 ## Streams Example
 ### What are the streams ? 
