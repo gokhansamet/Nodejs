@@ -1,5 +1,5 @@
 # Nodejs Repo Information
-
+  
 ## Node Farm
 It is a basic Nodejs application. The application receives a request and sends a data as a response to the client.
 
@@ -7,8 +7,6 @@ It is a basic Nodejs application. The application receives a request and sends a
 
 The picture above shows the overfiew of the application.  We have various products that have many information.You can see whether to be organic, the price and quantity for each produts and  for more detail you can click the detail button.
 
-<div display ="block" margin="auto"> 
-  
 ![Node Farm Product Detail Page](https://i.hizliresim.com/i4Txku.png)
 
 The product detail page shows the detail that related product as you can understand from the name. You can see the product where is from coming, what are the vitamins that it's has and the description. Also the add cart button exists to add the product to the shopping card (seeing the prices)
@@ -16,6 +14,7 @@ The product detail page shows the detail that related product as you can underst
 #### Note 
 I got information about streams and codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
 There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
+
 _________________________________________________________________________________________________________________________________________________
 ## Streams Example
 ### What are the streams ? 
