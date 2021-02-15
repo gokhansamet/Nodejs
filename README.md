@@ -13,7 +13,7 @@ The picture above shows the overfiew of the application.  We have various produc
 The product detail page shows the detail that related product as you can understand from the name. You can see the product where is from coming, what are the vitamins that it's has and the description. Also the add cart button exists to add the product to the shopping card (seeing the prices)
 
 #### Note 
-I got information about streams and codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+I got information from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
 There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
 _________________________________________________________________________________________________________________________________________________
 ## Streams Example
@@ -43,7 +43,7 @@ We can use the streams that are a efficient way to read or write a big file. The
 As we said, the problem was **backpressure** so we can use this solution 3 to fix it. Create a readable stream as we done before in Solution 2 , read and send the data into the writeable stream as an input using the **pipe()** function. It handles the speed of incoming data so we can fix the backpressure therefore this solution is the best efficent way.
 _________________________________________________________________________________________________________________________________________________
 #### Note 
-I got information about streams and codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+I got information from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
 There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
 _________________________________________________________________________________________________________________________________________________
 ### Require and Exports Example
@@ -75,7 +75,7 @@ If we run the code that in caching.js you can see the output below
 "Hello World" executed once because when we run the require module it reads the entire file and it also stored the module.exports into the cache then we can call many times the cache() function it rendered only "Hello from caching".
 
 #### Note 
-I got information about streams and codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+I got information from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
 There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
 _________________________________________________________________________________________________________________________________________________
 
