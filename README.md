@@ -1,6 +1,21 @@
 # Nodejs Repo Information
 
+
 ## Node Farm
+It is a basic Nodejs application. The application receives a request and sends a data as a response to the client.
+
+![Node Farm Overview Page](https://i.hizliresim.com/RUWStx.png)
+
+The picture above shows the overfiew of the application.  We have various products that have many information.You can see whether to be organic, the price and quantity for each produts and  for more detail you can click the detail button.
+
+![Node Farm Product Detail Page](https://i.hizliresim.com/i4Txku.png)
+
+The product detail page shows the detail that related product as you can understand from the name. You can see the product where is from coming, what are the vitamins that it's has and the description. Also the add cart button exists to add the product to the shopping card (seeing the prices)
+
+#### Note 
+I got information about streams and codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
+
 _________________________________________________________________________________________________________________________________________________
 ## Streams Example
 ### What are the streams ? 
@@ -10,7 +25,7 @@ Streams are used to process (read and write) data piece by piece (chunk) without
 
 The above the table shows us kind of streams. Readable and Writeable are the most important streams. You can have a look at.
 
-Below you can see some of streaming companies.
+Below you can see some of streaming companies. 
 <p display = "inline" >
 <img src = "https://www.youtube.com/img/desktop/yt_1200.png"  width = 100 height = 64  />
 <img src = "https://yt3.ggpht.com/ytc/AAUvwnjWyBS5c0NrKoO9_UvJaNdyioRIk8Q84t83rUy24w=s900-c-k-c0x00ffffff-no-rj" width = 100 height = 64 />
