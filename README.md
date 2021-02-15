@@ -1,5 +1,6 @@
 # Nodejs Repo Information
-  
+
+
 ## Node Farm
 It is a basic Nodejs application. The application receives a request and sends a data as a response to the client.
 
@@ -20,20 +21,11 @@ ________________________________________________________________________________
 ### What are the streams ? 
 Streams are used to process (read and write) data piece by piece (chunk) without waiting to read or write the all data therefore we get free memory and get time. Perfect for  handling large volumes of data for example videos.
 
-<style> 
-  
-  img {
-    display : block
-    margin : auto
-  }
-
-</style>
-
 ![Streams Table](https://i.hizliresim.com/U7pVBx.png)
 
 The above the table shows us kind of streams. Readable and Writeable are the most important streams. You can have a look at.
 
-Below you can see some of streaming companies.
+Below you can see some of streaming companies. 
 <p display = "inline" >
 <img src = "https://www.youtube.com/img/desktop/yt_1200.png"  width = 100 height = 64  />
 <img src = "https://yt3.ggpht.com/ytc/AAUvwnjWyBS5c0NrKoO9_UvJaNdyioRIk8Q84t83rUy24w=s900-c-k-c0x00ffffff-no-rj" width = 100 height = 64 />
