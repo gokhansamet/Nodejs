@@ -7,6 +7,8 @@ It is a basic Nodejs application. The application receives a request and sends a
 
 The picture above shows the overfiew of the application.  We have various products that have many information.You can see whether to be organic, the price and quantity for each produts and  for more detail you can click the detail button.
 
+<div display ="block" margin="auto"> 
+  
 ![Node Farm Product Detail Page](https://i.hizliresim.com/i4Txku.png)
 
 The product detail page shows the detail that related product as you can understand from the name. You can see the product where is from coming, what are the vitamins that it's has and the description. Also the add cart button exists to add the product to the shopping card (seeing the prices)
@@ -16,6 +18,15 @@ ________________________________________________________________________________
 ## Streams Example
 ### What are the streams ? 
 Streams are used to process (read and write) data piece by piece (chunk) without waiting to read or write the all data therefore we get free memory and get time. Perfect for  handling large volumes of data for example videos.
+
+<style> 
+  
+  img {
+    display : block
+    margin : auto
+  }
+
+</style>
 
 ![Streams Table](https://i.hizliresim.com/U7pVBx.png)
 
