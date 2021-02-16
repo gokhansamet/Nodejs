@@ -1,6 +1,6 @@
 # Nodejs Repo Information
 
-
+_________________________________________________________________________________________________________________________________________________
 ## Node Farm
 It is a basic Nodejs application. The application receives a request and sends a data as a response to the client.
 
@@ -13,9 +13,8 @@ The picture above shows the overfiew of the application.  We have various produc
 The product detail page shows the detail that related product as you can understand from the name. You can see the product where is from coming, what are the vitamins that it's has and the description. Also the add cart button exists to add the product to the shopping card (seeing the prices)
 
 #### Note 
-I got information about streams and codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+I got information from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
 There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
-
 _________________________________________________________________________________________________________________________________________________
 ## Streams Example
 ### What are the streams ? 
@@ -34,11 +33,8 @@ Below you can see some of streaming companies.
 <img src = "https://acorn.tv/wp-content/themes/rlje/plugins/rlje-theme-settings/themes/acorn/img/social-logo.png" width = 100 height = 64 />
 <img src = "https://www.cordcuttersnews.com/wp-content/uploads/2019/09/Showtime_logo.jpg" width = 100 height = 64/>
 
-_________________________________________________________________________________________________________________________________________________
-
 ### What is the code's usage area ? 
 If we need reading a large text file from the file system and send it to the client then we can use the this code that includes 3 different solutions. Basically read the files from a server and send it to a client as a response.
-_________________________________________________________________________________________________________________________________________________
 ### Solution 1 
 This solution is fine but there is a problem. Node have to load the entire data into memory because only after that's ready it can send the data to a client but if we have a big file as a we have in the folder, the app will be crashed because Node process consumes resources very quickly.Therefore you can use it while using a small text file, you can't with a big file.
 ### Solution 2 : Streams
@@ -47,5 +43,39 @@ We can use the streams that are a efficient way to read or write a big file. The
 As we said, the problem was **backpressure** so we can use this solution 3 to fix it. Create a readable stream as we done before in Solution 2 , read and send the data into the writeable stream as an input using the **pipe()** function. It handles the speed of incoming data so we can fix the backpressure therefore this solution is the best efficent way.
 _________________________________________________________________________________________________________________________________________________
 #### Note 
-I got information about streams and codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+I got information from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
 There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
+_________________________________________________________________________________________________________________________________________________
+### Require and Exports Example
+We can use the require module for three different uses
+
+* Core modules
+
+> require("http")
+
+* Developer modules
+
+> require("./develop")
+
+> If we create a developer modules should use "./" or "../"
+
+* 3rd party modules
+
+> require("express")
+
+> From npm 
+
+If you want to send multiple value, you should use **exports**, otherwise if you can to send a single variable, you should **module.exports**
+
+#### Caching
+If we run the code that in caching.js you can see the output below
+
+![Output](https://i.hizliresim.com/br0GhQ.png)
+
+"Hello World" executed once because when we run the require module it reads the entire file and it also stored the module.exports into the cache then we can call many times the cache() function it rendered only "Hello from caching".
+
+#### Note 
+I got information from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
+_________________________________________________________________________________________________________________________________________________
+
