@@ -9,7 +9,7 @@ const writeFilePro = require("./modules/write-file-pro");
 
 ////////////////////// To fix the callback hell //////////////////////
 
-// Solution 1: Using then() method
+// Solution 1: Using promise - Features of ES6
 
 // readFilePro(`${__dirname}/dog.txt`)
 //   .then((data) => {
@@ -25,7 +25,7 @@ const writeFilePro = require("./modules/write-file-pro");
 //     console.log(err.message);
 //   });
 
-// Solution 2: Using async/await method of ES8 feature
+// Solution 2: Using async/await - Features of ES2017
 
 const getDogPic = async () => {
   try {
