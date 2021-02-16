@@ -43,7 +43,7 @@ We can use the streams that are a efficient way to read or write a big file. The
 As we said, the problem was **backpressure** so we can use this solution 3 to fix it. Create a readable stream as we done before in Solution 2 , read and send the data into the writeable stream as an input using the **pipe()** function. It handles the speed of incoming data so we can fix the backpressure therefore this solution is the best efficent way.
 _________________________________________________________________________________________________________________________________________________
 #### Note 
-I got information from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+I got the codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
 There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
 _________________________________________________________________________________________________________________________________________________
 ### Require and Exports Example
@@ -78,4 +78,18 @@ If we run the code that in caching.js you can see the output below
 I got information from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
 There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
 _________________________________________________________________________________________________________________________________________________
+### Promises and Async/Await 
+If you use the nested callback functions so much then there can be a problem that is called **callback hell**. To fix the problem we use promises(ES6) or async/await (ES2017).
+In this project we have a txt file that is called dog.txt and have an API that is located on https://dog.ceo/dog-api. We get the data from API then write the data in a txt file.
+
+A promise is commonly defined as a proxy for a value that will eventually become available.The promises said to us "Hey I will fetch the data from as you wish, promise you!  I will be in "pending state"until the data is available if the process of fetching data is successful then I will be in "resolve state" otherwise if there is an error will be in "reject state". Besides, to consume the promises then() and cath() methods are used. But there is a better way that is async/await. Using async is better than the use callbacks functions to create a promises because after a certain time the promises can be more complex.
+
+Async always returns a promise then we use await that means is "the calling code will stop until the promise is resolved or rejected". You can see the codes in the project.
+
+Also in there multiple promises example, the classic way to read,write and get data.
+
+#### Note 
+I got the codes from the **Node.js, Express, MongoDB & More: The Complete Bootcamp 2021** course that instructor Jonas Schmedtmann.
+There is the link: https://www.udemy.com/course/nodejs-express-mongodb-bootcamp
+
 
