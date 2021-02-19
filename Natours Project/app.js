@@ -27,6 +27,27 @@ app.get('/api/v1/tours', (req, res) => {
   });
 });
 
+// To create a varaible which in the URL use (:) without parantheses then write a parameter name
+// Ex. :category
+// To create an optional variable use (?) after the parameter name
+// Ex. :category?
+app.get('/api/v1/tours/:id', (req, res) => {
+  const id = req.params.id * 1; // To convert string to int
+  const tour = tours.find((el) => el.id === id);
+  if (!tour) {
+    res.status(404).json({
+      status: 'Failed',
+      message: 'Invalid ID',
+    });
+  }
+  res.status(200).json({
+    status: 'Success',
+    data: {
+      tour,
+    },
+  });
+});
+
 // Create a tour with POST
 app.post('/api/v1/tours', (req, res) => {
   // To assign an id, while we use database we don't assign an id manuel because database assigns automically
