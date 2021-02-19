@@ -1,7 +1,8 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
-
+// For using req.body
+app.use(express.json());
 // app.get('/', (req, res) => {
 //   res.json({ message: 'Hello from the server side', app: 'Natours' });
 // });
@@ -24,6 +25,26 @@ app.get('/api/v1/tours', (req, res) => {
       tours: tours, // Just writing tours is enough
     },
   });
+});
+
+// Create a tour with POST
+app.post('/api/v1/tours', (req, res) => {
+  // To assign an id, while we use database we don't assign an id manuel because database assigns automically
+  const newId = tours[tours.length - 1].id + 1;
+  const newTour = Object.assign({ id: newId }, req.body);
+  tours.push(newTour);
+  fs.writeFile(
+    `${__dirname}/dev-data/data/tours-simple.json`,
+    JSON.stringify(tours),
+    (err) => {
+      res.status(201).json({
+        status: 'Success',
+        data: {
+          tour: newTour,
+        },
+      });
+    }
+  );
 });
 
 const port = 3000;
