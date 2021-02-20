@@ -23,7 +23,6 @@ const tours = JSON.parse(
 );
 
 const getAllTours = (req, res) => {
-  console.log(req.requestTime);
   res.status(200).json({
     status: 'Success',
     results: tours.length,
@@ -68,13 +67,60 @@ const createTour = (req, res) => {
     }
   );
 };
-app.route('/api/v1/tours').get(getAllTours).post(createTour);
-// To create a varaible which in the URL use (:) without parantheses then write a parameter name
-// Ex. :category
-// To create an optional variable use (?) after the parameter name
-// Ex. :category?
-app.route('/api/v1/tours/:id').get(getTour);
+const updateTour = (req, res) => {
+  res.status(200).json({
+    status: 'Update',
+  });
+};
 
+const deleteTour = (req, res) => {
+  res.status(200).json({
+    status: 'Delete',
+  });
+};
+
+const getAllUsers = (req, res) => {
+  res.status(500).json({
+    status: 'Error',
+  });
+};
+
+const createUser = (req, res) => {
+  res.status(500).json({
+    status: 'Error',
+  });
+};
+
+const getUser = (req, res) => {
+  res.status(500).json({
+    status: 'Error',
+  });
+};
+const updateUser = (req, res) => {
+  res.status(500).json({
+    status: 'Error',
+  });
+};
+const deleteUser = (req, res) => {
+  res.status(500).json({
+    status: 'Error',
+  });
+};
+
+// The variables below are a middleware that related routers
+const tourRouter = express.Router();
+const userRouter = express.Router();
+
+tourRouter.route('/').get(getAllTours).post(createTour);
+tourRouter.route('/:id').get(getTour).patch(updateTour).delete(deleteTour);
+
+userRouter.route('/').get(getAllUsers).post(createUser);
+userRouter.route('/:id').get(getUser).patch(updateUser).delete(deleteUser);
+// Mounting that means is creating new router on the route
+app.use('/api/v1/tours', tourRouter);
+app.use('/api/v1/users', userRouter);
+
+// START SERVER
 const port = 3000;
 app.listen(port, () => {
   console.log(`Application is working on port ${port}`);
