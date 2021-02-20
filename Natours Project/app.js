@@ -4,6 +4,18 @@ const app = express();
 // For using req.body
 app.use(express.json());
 
+//Using the middleware
+app.use((req, res, next) => {
+  console.log('Hello from the middleware');
+  // use the next() to avoid getting stuck
+  next();
+});
+
+app.use((req, res, next) => {
+  req.requestTime = new Date().toISOString();
+  next();
+});
+
 // Reading a data from a file using synchronous way
 // It is okay because it is a top-level-code it executes once after the code starts
 const tours = JSON.parse(
@@ -11,6 +23,7 @@ const tours = JSON.parse(
 );
 
 const getAllTours = (req, res) => {
+  console.log(req.requestTime);
   res.status(200).json({
     status: 'Success',
     results: tours.length,
