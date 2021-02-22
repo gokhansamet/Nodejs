@@ -1,8 +1,14 @@
 const express = require('express');
+const morgan = require('morgan');
+
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
 
 const app = express();
+if (process.env.NODE_ENV === 'development') {
+  // To log
+  app.use(morgan('dev'));
+}
 // For using req.body
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
