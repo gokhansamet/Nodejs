@@ -5,7 +5,6 @@ const userRouter = require('./routes/userRoutes');
 const app = express();
 // For using req.body
 app.use(express.json());
-
 //Using the middleware
 app.use((req, res, next) => {
   console.log('Hello from the middleware');
